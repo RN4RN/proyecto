@@ -711,7 +711,7 @@ header h1 {
 <div class="card">
     <center>
   <div class="card-image">
-    <a href="http://localhost/nuevo/contraseña/mapaprincipal/consumibles/index.php" style="text-decoration:none;"><img src="https://i.postimg.cc/XvsNjrqh/Gemini-Generated-Image-x0w899x0w899x0w8.jpg" alt="Equipos consumibles"></a>
+    <a href="/consumibles/index.php" style="text-decoration:none;"><img src="https://i.postimg.cc/XvsNjrqh/Gemini-Generated-Image-x0w899x0w899x0w8.jpg" alt="Equipos consumibles"></a>
   </div>
   </center>
   <p class="card-title"><Em>Equipos Consumibles</Em></p>
@@ -720,7 +720,7 @@ header h1 {
   </p>
   <center>
     <br>
-  <a href="http://localhost/nuevo/contraseña/mapaprincipal/consumibles/index.php"><button class="botton">VER</button>
+  <a href="/consumibles/index.php"><button class="botton">VER</button>
   </center>
  </a>
   <?php
@@ -741,7 +741,7 @@ if ($fila = $resultado->fetch_assoc()) {
 <div class="card">
     <center>
   <div class="card-image">
-   <a href="http://localhost/nuevo/contraseña/mapaprincipal/equipos/index.php" style="text-decoration:none;"> <img src="https://i.postimg.cc/767B1Qdy/Gemini-Generated-Image-6uffe66uffe66uff.png" alt="equipos en general"></a>
+   <a href="/equipos/index.php" style="text-decoration:none;"> <img src="https://i.postimg.cc/767B1Qdy/Gemini-Generated-Image-6uffe66uffe66uff.png" alt="equipos en general"></a>
   </div>
   </center>
   <p class="card-title"><Em>Equipos</Em></p>
@@ -750,7 +750,7 @@ if ($fila = $resultado->fetch_assoc()) {
   </p>
   <center>
     <br>
-  <a href="http://localhost/nuevo/contraseña/mapaprincipal/equipos/index.php"><button class="botton">VER</button> </a>
+  <a href="/equipos/index.php"><button class="botton">VER</button> </a>
   </center>
 
  <?php
@@ -772,7 +772,7 @@ if ($fila = $resultado->fetch_assoc()) {
 <div class="card">
     <center>
   <div class="card-image">
-    <a href="http://localhost/nuevo/contraseña/mapaprincipal/Noconsumibles/index.php" style="text-decoration:none;"><img src="https://i.postimg.cc/nzBN0Lgr/Gemini-Generated-Image-gqosr0gqosr0gqos.png" alt="equipos permanentes">
+    <a href="/Noconsumibles/index.php" style="text-decoration:none;"><img src="https://i.postimg.cc/nzBN0Lgr/Gemini-Generated-Image-gqosr0gqosr0gqos.png" alt="equipos permanentes">
   </div>
   </center>
   <p class="card-title"><Em>Equipos Permanentes</Em></p>
@@ -832,7 +832,7 @@ if ($fila = $resultado->fetch_assoc()) {
 <div class="card">
     <center>
   <div class="card-image">
-    <a href="http://localhost/nuevo/contraseña/mapaprincipal/operadores/index.php" style="text-decoration:none;"><img src="https://i.postimg.cc/VLdpV432/Gemini-Generated-Image-5knpes5knpes5knp.png" alt="Operadores"></a>
+    <a href="/operadores/index.php" style="text-decoration:none;"><img src="https://i.postimg.cc/VLdpV432/Gemini-Generated-Image-5knpes5knpes5knp.png" alt="Operadores"></a>
   </div>
   </center>
   <p class="card-title"><Em>Operadores</Em></p>
@@ -841,7 +841,7 @@ if ($fila = $resultado->fetch_assoc()) {
   </p>
   <center>
     <br>
-  <a href="http://localhost/nuevo/contraseña/mapaprincipal/operadores/index.php"><button class="botton">IR</button>
+  <a href="/operadores/index.php"><button class="botton">IR</button>
   </center>
   </a>
   <?php
@@ -862,7 +862,7 @@ if ($fila = $resultado->fetch_assoc()) {
 <div class="card">
     <center>
   <div class="card-image">
-    <a href="http://localhost/nuevo/contraseña/mapaprincipal/movimientos/index.php" style="text-decoration:none;"><img src="https://i.postimg.cc/rpjLksgH/Gemini-Generated-Image-1gkwx41gkwx41gkw.png" alt="movimientos"></a>
+    <a href="/movimientos/index.php" style="text-decoration:none;"><img src="https://i.postimg.cc/rpjLksgH/Gemini-Generated-Image-1gkwx41gkwx41gkw.png" alt="movimientos"></a>
   </div>
   </center>
   <p class="card-title"><Em>Movimientos de Equipo</Em></p>
@@ -871,7 +871,7 @@ if ($fila = $resultado->fetch_assoc()) {
   </p>
   <center>
     <br>
-  <a href="http://localhost/nuevo/contraseña/mapaprincipal/movimientos/index.php"><button class="botton">IR</button>
+  <a href="/movimientos/index.php"><button class="botton">IR</button>
   </center>
   </a>
   <?php
@@ -892,7 +892,7 @@ if ($fila = $resultado->fetch_assoc()) {
 <div class="card">
     <center>
   <div class="card-image">
-    <a href="http://localhost/nuevo/contraseña/mapaprincipal/direccion/verificacion.php" style="text-decoration:none;"><img src="https://i.postimg.cc/KzVG6482/Gemini-Generated-Image-pb60y8pb60y8pb60.png" alt="Director"></a>
+    <a href="/direccion/verificacion.php" style="text-decoration:none;"><img src="https://i.postimg.cc/KzVG6482/Gemini-Generated-Image-pb60y8pb60y8pb60.png" alt="Director"></a>
   </div>
   </center>
   <p class="card-title">GERENCIA</p>
@@ -901,7 +901,7 @@ if ($fila = $resultado->fetch_assoc()) {
   </p>
   <center>
     <br>
-  <a href="http://localhost/nuevo/contraseña/mapaprincipal/direccion/verificacion.php"><button class="botton">IR</button>
+  <a href="/direccion/verificacion.php"><button class="botton">IR</button>
   </center>
   </a>
   <?php
