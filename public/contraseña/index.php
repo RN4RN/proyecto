@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </script>";
         } elseif (password_verify($clave, $fila['clave'])) {
             $_SESSION['nombre'] = $nombre;
-            header("Location: /contraseña/mapaprincipal/index.php");
+            header("Location: /mapaprincipal/index.php");
             exit();
         } else {
             echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>";
