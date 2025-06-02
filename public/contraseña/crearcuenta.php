@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             timer: 3000,
                             showConfirmButton: false
                         }).then(() => {
-                            window.location.href = '/contrase%C3%B1a/indexlogin.php';
+                            window.location.href = '/contrase%C3%B1a/index.php';
                         });
                     });
                 </script>";
