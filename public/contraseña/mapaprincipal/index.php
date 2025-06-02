@@ -1,10 +1,10 @@
 <?php
-require 'conexion.php';
+require_once './config/conexion.php';
 
 session_start();
 
 if (!isset($_SESSION['nombre'])) {
-    header('Location: http://localhost/nuevo/contrase%C3%B1a/index.php');
+    header('Location: /contrase%C3%B1a/index.php');
     exit();
 }
 
