@@ -1,5 +1,5 @@
 <?php
-include 'conexion.php';
+require_once './mapaprincipal/config/conexion.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
