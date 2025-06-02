@@ -3,7 +3,7 @@ require_once '../config/conexion.php';
 session_start();
 
 if (!isset($_SESSION['nombre'])) {
-    header('Location: http://localhost/nuevo/contrase%C3%B1a/indexlogin.php');
+    header('Location: /contrase%C3%B1a/indexlogin.php');
     exit();
 }
 
@@ -250,7 +250,7 @@ $result = $conexion->query($sql);
 <body>
 <div class="barra">
       <!-- From Uiverse.io by xopc333 --> 
-  <a href="http://localhost/nuevo/contraseña/mapaprincipal/index.php"><button class="button"> 
+  <a href="/mapaprincipal/index.php"><button class="button"> 
   <div class="button-box">
     <span class="button-elem">
       <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
