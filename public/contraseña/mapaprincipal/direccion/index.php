@@ -559,7 +559,7 @@ $director_nombre = $_SESSION['nombre'];
 
 <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
     <div class="container-fluid">
-          <a href="http://localhost/nuevo/contraseña/mapaprincipal/index.php"><button class="button"> 
+          <a href="/mapaprincipal/index.php"><button class="button"> 
                 <div class="button-box">
                    <span class="button-elem">
                     <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
