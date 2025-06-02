@@ -1,0 +1,463 @@
+ 
+      #ventanaDerecha {
+      border-radius:20px;
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 25%;
+      height: 100%;
+      background-color: rgba(39, 39, 39, 0.94);
+      color: white;
+      padding: 20px;
+      display: none;
+      overflow-y: auto;
+     
+    }
+    #ventanaDerecha{
+        text-align: center;
+    }
+
+    #ventanaDerecha.mostrar {
+      display: block;
+    }
+
+    #btnCerrar {
+      float: right;
+      border-radius: 20px;
+      background-color: crimson;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    #btnCerrar:hover {
+      background-color: red;
+    }
+      /* From Uiverse.io by Li-Deheng */ 
+      .btn-conteiner {
+  
+  height: 40px;
+  margin-left:5px;
+  margin-top:5px ;
+  display: flex;
+  justify-content: center;
+  --color-text: #ffffff;
+  --color-background:rgb(219, 14, 76);
+  --color-outline: #ff145b80;
+  --color-shadow: #00000080;
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  padding: 5px 30px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: 1s;
+  border-radius: 100px;
+  box-shadow: 0 0 0.2em 0 var(--color-background);
+}
+
+
+.btn-content .icon-arrow {
+  transition: 0.5s;
+  margin-right: 0px;
+  transform: scale(0.6);
+}
+
+.btn-content:hover .icon-arrow {
+  transition: 0.5s;
+  margin-right: 25px;
+}
+
+.icon-arrow {
+  width: 20px;
+  margin-left: 15px;
+  position: relative;
+  top: 6%;
+}
+  
+/* SVG */
+#arrow-icon-one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+#arrow-icon-two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.btn-content:hover #arrow-icon-three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.btn-content:hover #arrow-icon-one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.btn-content:hover #arrow-icon-two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+
+  50% {
+    fill: var(--color-background);
+  }
+
+  100% {
+    fill: white;
+  }
+}
+
+/* Button animations */
+@-webkit-keyframes btn-content {
+  0% {
+    outline: 0.2em solid var(--color-background);
+    outline-offset: 0;
+  }
+}
+
+@keyframes btn-content {
+  0% {
+    outline: 0.2em solid var(--color-background);
+    outline-offset: 0;
+  }
+}/* Agrega esto en tu sección de estilos */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 45%; /* Ajusta según necesites */
+    overflow: hidden;
+    z-index: -2;
+}
+
+.banner-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1.5s ease-in-out;
+    opacity: 0;
+    z-index: -2;
+}
+
+.banner-img.active {
+    opacity: 1;
+}
+
+.dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: -1;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+  .calendar {
+    margin-left: 90%;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    margin-top: 5px;
+    border:none;
+  
+    }
+   .calendar img{
+    width: 95%;
+      height: 95%;
+      object-fit: cover; /* Ajusta la imagen sin deformarla */
+   }
+   
+    .hamburger-button {
+      position: relative;
+      cursor: pointer;
+      width: 50px;
+      height: 40px;
+      margin-left:95%;
+      display: flex;
+      position: fixed;
+      margin-top: 10px;
+      
+    }
+    
+    .hamburger-button span {
+      position: absolute;
+      width: 45px;
+      height: 7px;
+      background: #f1faee;
+      border-radius: 100px;
+      display: inline-block;
+      transition: 0.3s ease;
+      left: 0;
+    }
+    
+    .hamburger-button span.top {
+      top: 0;
+    }
+    
+    .hamburger-button span.middle {
+      top: 17px;
+    }
+    
+    .hamburger-button span.bottom {
+      bottom: 0;
+    }
+    /*Otro stylo from Barra lateral*/
+    
+/* --- Overlay --- */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 998; /* Debajo del sidebar */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0s 0.4s linear;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* --- Barra Lateral --- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 580px; /* Ancho de la barra */
+    max-width: 85%; /* Máximo ancho en pantallas pequeñas */
+    height: 100vh; /* Altura completa */
+    background-color: #ffffff; /* Fondo blanco */
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transform: translateX(100%); /* Oculta a la derecha */
+    transition: transform 0.4s ease-in-out;
+    z-index: 999; /* Encima del overlay, debajo del hamburguesa */
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Scroll si el contenido es largo */
+}
+
+.sidebar.active {
+    transform: translateX(0); /* Muestra la barra */
+}
+
+/* Opcional: Empujar el contenido principal cuando la barra está activa */
+/* body.sidebar-active .main-content {
+    margin-right: 280px;
+} */
+
+
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #343a40;
+}
+
+.sidebar-content {
+    padding: 20px;
+    flex-grow: 1; /* Ocupa el espacio restante */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre botones */
+}
+
+/* --- Estilos Comunes para Botones del Sidebar --- */
+.sidebar-button, .profile-button, .logout-button {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #495057; /* Color de texto */
+    background-color: transparent; /* Fondo transparente por defecto */
+    border: 1px solid transparent; /* Para mantener tamaño en hover */
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%; /* Ocupa todo el ancho */
+    text-align: left;
+}
+
+.sidebar-button:hover, .profile-button:hover, .logout-button:hover {
+    background-color: #e9ecef; /* Fondo sutil al pasar el ratón */
+    color: #212529;
+}
+
+.sidebar-button svg, .profile-button img {
+    margin-right: 12px; /* Espacio entre icono/imagen y texto */
+    flex-shrink: 0; /* Evita que el icono se encoja */
+}
+
+.sidebar-button svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor; /* Hereda color del texto */
+}
+
+/* --- Botón de Perfil Específico --- */
+.profile-section {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.profile-button {
+    background-color: #f8f9fa; /* Un fondo ligeramente distinto */
+    border: 1px solid #dee2e6;
+}
+
+.profile-button img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Imagen circular */
+    object-fit: cover; /* Asegura que la imagen cubra el círculo */
+    border: 2px solid #ced4da;
+}
+
+.profile-description {
+    background-color: #e9ecef;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #495057;
+    display: none; /* Oculto por defecto */
+    border-left: 3px solid #007bff; /* Un detalle de color */
+    animation: fadeIn 0.3s ease; /* Animación suave */
+}
+
+.profile-description p {
+    margin-bottom: 5px;
+}
+.profile-description strong {
+    color: #343a40;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* --- Botón de Calendario Específico --- */
+.calendar-button svg {
+    color: #dc3545; /* Icono rojo */
+}
+.calendar-button:hover svg {
+    color: #a71d2a; /* Rojo más oscuro al pasar el ratón */
+}
+
+
+/* --- Botón Cerrar Sesión (Estilos Uiverse Adaptados) --- */
+.btn-container {
+    margin-top: auto; /* Empuja el botón al final (opcional) */
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.logout-button {
+    background-color: #dc3545; /* Rojo para logout */
+    color: #ffffff;
+    border: none;
+    justify-content: space-between; /* Separa texto e icono */
+    font-weight: 500;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+    color: #ffffff;
+}
+
+.logout-button .btn-title {
+    flex-grow: 1;
+}
+
+.logout-button .icon-arrow {
+    width: 30px; /* Ajusta tamaño del contenedor SVG */
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.logout-button .icon-arrow svg {
+    width: 100%;
+    height: auto;
+    margin: 0; /* Resetea margen del SVG general */
+}
+
+.logout-button .arrow-icon {
+    fill: #ffffff; /* Color de las flechas SVG */
+    transition: fill 0.2s ease;
+}
+
+/* Animación sutil de flechas en hover (opcional) */
+.logout-button:hover .icon-arrow #arrow-icon-one {
+    animation: arrow-move 0.8s ease-in-out infinite 0.1s;
+}
+.logout-button:hover .icon-arrow #arrow-icon-two {
+    animation: arrow-move 0.8s ease-in-out infinite 0.2s;
+}
+.logout-button:hover .icon-arrow #arrow-icon-three {
+    animation: arrow-move 0.8s ease-in-out infinite 0.3s;
+}
+
+@keyframes arrow-move {
+  0% { transform: translateX(0); opacity: 1; }
+  50% { transform: translateX(3px); opacity: 0.5; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+
+/* --- Responsividad --- */
+@media (max-width: 768px) {
+    .main-content {
+        padding-right: 60px; /* Menos espacio para el botón en móvil */
+    }
+    /* Si empujas el contenido, ajusta el margen en móvil */
+    /* body.sidebar-active .main-content {
+        margin-right: 85%;
+    } */
+}

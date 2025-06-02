@@ -1,0 +1,156 @@
+ /* Botón flotante */
+    #chat-bubble {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background: url('https://i.postimg.cc/mZwBhtWD/bottele-1.png') no-repeat center center;
+      background-size: contain;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 2;
+    }
+    /* Fondo transparente */
+    #chat-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.589);
+      display: none;
+      z-index: 999;
+    }
+    /* Chat widget */
+    #chat-widget {
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      width: 280px;
+      background: linear-gradient(to bottom right, #7ca9c7c4, #b98f8fd4);
+      border-radius: 16px;
+      padding: 8px;
+      display: none;
+      flex-direction: column;
+      z-index: 1000;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      overflow: hidden;
+    }
+    /* Header */
+    #chat-header {
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #close-btn {
+      cursor: pointer;
+      font-size: 20px;
+      user-select: none;
+    }
+    /* Contenedor chat y opciones */
+    .container-chat-options {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      height: 350px;
+      overflow: hidden;
+    }
+    /* Mensajes */
+    #messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      font-size: 14px;
+      color: white;
+      background: rgba(0,0,0,0.3);
+      border-radius: 10px;
+      margin-bottom: 8px;
+    }
+    /* Textarea para escribir */
+    #chat_bot {
+      margin-left:3px;
+      width: 90%;
+      height: 20px;
+      background-color: transparent;
+      border-radius: 16px;
+      border: 1px solid #888;
+      color: white;
+      padding: 8px;
+      resize: none;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+      outline: none;
+    }
+    #chat_bot::placeholder {
+      color: #ccc;
+    }
+    /* Botones */
+    .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: -5px;
+    }
+    .btns-add button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: white;
+      margin-right: 8px;
+    }
+    .btns-add button svg {
+      stroke: currentColor;
+      fill: none;
+    }
+    .btn-submit {
+      background: #006bf711;
+      border: none;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn-submit svg path {
+      fill: white;
+    }
+    /* Mensajes usuario y bot */
+    .user, .bot {
+      margin: 8px 0;
+      max-width: 85%;
+      padding: 8px 12px;
+      border-radius: 10px;
+      word-wrap: break-word;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+
+    }
+    .user {
+      background: rgb(92, 92, 92);
+  
+      align-self: flex-end;
+      margin-left: auto;
+      text-align: right;
+      color:white;
+    }
+    .bot {
+     
+      align-self: flex-start;
+      margin-right: auto;
+      text-align: left;
+      color:white;
+    }
+    .bot.error {
+      background: rgba(255, 0, 0, 0.1);
+      color: red;
+    }

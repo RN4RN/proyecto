@@ -1,0 +1,14 @@
+.boton{
+    height: 30px;
+    width: 100px;
+    background-color: #495057;
+    border-radius: 20px;
+    border-bottom: 30px;
+  }
+  .boton:hover{
+   background-color: rgba(105, 105, 105, 0.411);
+   height: 40;
+   width: 60;
+  
+  }
+  

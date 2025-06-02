@@ -1,0 +1,417 @@
+/* ===== VARIABLES CSS GLOBALES ===== */
+:root {
+    --primary-color: #4a90e2; /* Un azul moderno y amigable */
+    --primary-color-darker: #357abd;
+    --accent-color: #ff6b6b; /* El rojo que ya usabas, como acento */
+    --accent-color-darker: #ff4f4f;
+    
+    --text-color: #333;
+    --text-color-light: #555;
+    --text-color-very-light: #777;
+    
+    --bg-color: #f7f8fc; /* Un fondo muy claro, ligeramente azulado */
+    --surface-color: #ffffff; /* Para tarjetas y paneles */
+    --border-color: #e0e0e0;
+    --border-color-light: #eeeeee;
+    
+    --success-color: #2ecc71;
+    --success-color-bg: #e6f7eb;
+    --error-color: #e74c3c;
+    --error-color-bg: #fbe8e6;
+    --warning-color: #f39c12; /* Para el día de 'hoy' */
+    
+    --font-family-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 10px rgba(0,0,0,0.1);
+    --shadow-lg: 0 8px 20px rgba(0,0,0,0.1);
+
+    /* Colores de eventos (puedes mantener los tuyos o ajustarlos) */
+    --event-telecom: #4CAF50;
+    --event-cumpleanos: #FFC107;
+    --event-festivo: #2196F3;
+    --event-importante: #f44336;
+    --event-otro: #9E9E9E;
+    --event-general: var(--accent-color);
+}
+
+/* ===== ESTILOS BASE ===== */
+body {
+    font-family: var(--font-family-main);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 25px;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+.container10 {
+    background-color: var(--surface-color);
+    padding: 30px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    width: 90%;
+    max-width: 1000px;
+}
+
+/* ===== ENCABEZADO Y NAVEGACIÓN DEL MES ===== */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.month-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+#current-month-year {
+    font-size: 1.8em;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.month-navigation button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    font-weight: 500;
+}
+
+.month-navigation button:hover {
+    background-color: var(--accent-color-darker);
+}
+.month-navigation button:active {
+    transform: translateY(1px);
+}
+
+/* ===== CUADRÍCULA DEL CALENDARIO ===== */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px; /* Espacio entre celdas de día de semana y la cuadrícula */
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.weekday {
+    font-weight: 600;
+    padding: 12px 0;
+    background-color: var(--primary-color-darker);
+    color: white;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.9em;
+}
+
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px; /* Espacio entre celdas de día */
+}
+
+.day-cell {
+    padding: 10px;
+    border: 1px solid var(--border-color-light);
+    min-height: 90px; /* Un poco más de altura */
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--surface-color);
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-sm);
+}
+
+.day-cell.empty {
+    background-color: #f9f9f9; /* Un gris muy claro para celdas vacías */
+    cursor: default;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.day-cell:not(.empty):hover {
+    background-color: #e9f2fc; /* Un azul muy claro al pasar el mouse */
+    border-color: var(--primary-color);
+}
+
+.day-cell.today {
+    background-color: var(--warning-color);
+    color: #fff; /* Texto blanco sobre fondo amarillo/naranja */
+    font-weight: bold;
+    border: 1px solid var(--warning-color);
+}
+.day-cell.today .day-number {
+    color: #fff;
+}
+.day-cell.today .event-indicator {
+    border: 1px solid white; /* Borde para indicadores en día de hoy */
+}
+
+.day-cell.selected {
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color-darker);
+    color: white;
+}
+.day-cell.selected .day-number {
+    color: white;
+}
+.day-cell.selected .event-indicator {
+    border: 1px solid white;
+}
+
+
+.day-number {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: var(--text-color-light);
+    font-weight: 500;
+}
+
+/* Contenedor para los indicadores de evento para un mejor diseño */
+.event-indicators-container {
+    display: flex;
+    flex-wrap: wrap; /* Si hay muchos eventos, que se ajusten */
+    justify-content: center;
+    gap: 4px; /* Espacio entre indicadores */
+    margin-top: auto; /* Empuja los indicadores hacia abajo si hay espacio */
+    padding-bottom: 5px; /* Un poco de espacio inferior */
+}
+
+.event-indicator {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    display: inline-block; /* Ya no es necesario margin-top aquí */
+    box-shadow: 0 0 2px rgba(0,0,0,0.2); /* Sombra sutil para los puntos */
+}
+/* Colores específicos de indicadores */
+.event-indicator.general { background-color: var(--event-general); }
+.event-indicator.operador-telecomunicaciones { background-color: var(--event-telecom); }
+.event-indicator.cumpleaños { background-color: var(--event-cumpleanos); }
+.event-indicator.festivo { background-color: var(--event-festivo); }
+.event-indicator.importante { background-color: var(--event-importante); }
+.event-indicator.otro { background-color: var(--event-otro); }
+
+
+/* ===== PANELES DE INFORMACIÓN Y FORMULARIO ===== */
+.info-panel, .event-form-container {
+    background-color: var(--surface-color);
+    padding: 20px;
+    border-radius: var(--border-radius-md);
+    margin-bottom: 25px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+}
+
+.info-panel h3, .event-form-container h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color-light);
+    padding-bottom: 10px;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+/* Listas de eventos */
+#upcoming-events-list, #day-events-list {
+    list-style: none;
+    padding: 0;
+}
+
+#upcoming-events-list li, #day-events-list .event-item {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color-light);
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+#upcoming-events-list li:last-child, #day-events-list .event-item:last-child {
+    border-bottom: none;
+}
+
+.event-item strong {
+    display: block;
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+.event-item small {
+    color: var(--text-color-very-light);
+    display: block;
+    font-size: 0.85em;
+    margin-bottom: 5px;
+}
+.event-item p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: var(--text-color-light);
+}
+
+/* ===== FORMULARIO DE EVENTOS ===== */
+#add-event-form label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: var(--text-color-light);
+}
+
+#add-event-form input[type="date"],
+#add-event-form input[type="text"],
+#add-event-form textarea,
+#add-event-form select {
+    width: 100%; /* Simplificado con box-sizing */
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    box-sizing: border-box;
+    font-size: 0.95em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+#add-event-form input[type="date"] { /* Ajuste para el icono del calendario */
+    padding-right: 10px;
+}
+
+#add-event-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#add-event-form input:focus,
+#add-event-form textarea:focus,
+#add-event-form select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2); /* Sombra de foco sutil */
+    outline: none;
+}
+
+#add-event-form button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    display: inline-block; /* Para que no ocupe todo el ancho */
+    margin-top: 10px;
+}
+
+#add-event-form button[type="submit"]:hover {
+    background-color: var(--primary-color-darker);
+}
+#add-event-form button[type="submit"]:active {
+    transform: translateY(1px);
+}
+
+
+/* ===== ÁREA DE NOTIFICACIONES ===== */
+#notifications-area {
+    margin-top: 20px;
+    text-align: left; /* Mejor alineación para notificaciones */
+}
+.notification {
+    padding: 12px 18px;
+    margin-bottom: 15px;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid transparent;
+    font-size: 0.95em;
+}
+.notification.success {
+    background-color: var(--success-color-bg);
+    color: var(--success-color);
+    border-color: var(--success-color);
+}
+.notification.error {
+    background-color: var(--error-color-bg);
+    color: var(--error-color);
+    border-color: var(--error-color);
+}
+
+/* ===== ESTILOS DEL BOTÓN "VOLVER" DE UIVERSE.IO ===== */
+/* (Se mantienen tus estilos, solo ajusto margen si es necesario) */
+.Btn {
+  position: relative;
+  width: 150px;
+  height: 55px;
+  border-radius: 45px;
+  border: none;
+  background-color: var(--accent-color); /* Usando variable por consistencia */
+  color: white;
+  box-shadow: 0px 10px 10px rgba(255, 95, 95, 0.3) inset, /* Ajusté alfa para suavizar */
+  0px 5px 10px rgba(5, 5, 5, 0.15), /* Ajusté alfa */
+  0px -10px 10px var(--accent-color-darker) inset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+.Btn::before {
+  width: 70%;
+  height: 2px;
+  position: absolute;
+  background-color: rgba(250, 250, 250, 0.678);
+  content: "";
+  filter: blur(1px);
+  top: 7px;
+  border-radius: 50%;
+}
+.Btn::after {
+  width: 70%;
+  height: 2px;
+  position: absolute;
+  background-color: rgba(250, 250, 250, 0.137);
+  content: "";
+  filter: blur(1px);
+  bottom: 7px;
+  border-radius: 50%;
+}
+.Btn:hover {
+  animation: jello-horizontal 0.9s both;
+}
+@keyframes jello-horizontal {
+  0% { transform: scale3d(1, 1, 1); }
+  30% { transform: scale3d(1.25, 0.75, 1); }
+  40% { transform: scale3d(0.75, 1.25, 1); }
+  50% { transform: scale3d(1.15, 0.85, 1); }
+  65% { transform: scale3d(0.95, 1.05, 1); }
+  75% { transform: scale3d(1.05, 0.95, 1); }
+  100% { transform: scale3d(1, 1, 1); }
+}
+
+/* Ajuste para el contenedor total (si es necesario) */
+.contenido-total{
+  width: 100%;
+  height: 100%;
+}
