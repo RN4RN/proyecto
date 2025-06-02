@@ -1,7 +1,6 @@
 <?php
 session_start();
-include 'conexion.php';
-
+require_once './mapaprincipal/config/conexion.php';
 echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
