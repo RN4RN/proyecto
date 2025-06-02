@@ -152,7 +152,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <button type="submit">Acceder</button>
             <div class="bottom-text">
-                <p>¿No tienes una cuenta? <a href="crearcuenta2.php">clic aquí</a></p>
+                <p>¿No tienes una cuenta? <a href="crearcuenta.php">clic aquí</a></p>
                 <p><a href="olvidocontra.php">¿Olvidaste tu contraseña?</a></p>
             </div>
         </form>
