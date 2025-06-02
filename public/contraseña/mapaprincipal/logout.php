@@ -1,6 +1,6 @@
 <?php
 session_start();
 session_destroy();
-header("Location: /contrase%C3%B1a/index.php");
+header("Location: https://proyecto-024g.onrender.com/index.php");
 exit();
 ?>
