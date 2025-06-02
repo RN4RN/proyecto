@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     timer: 2000,
                     showConfirmButton: false
                 }).then(() => {
-                    window.location.href = 'http://localhost/nuevo/contrase%C3%B1a/olvidocontra.php';
+                    window.location.href = '/contrase%C3%B1a/olvidocontra.php';
                 });
             });
         </script>";
