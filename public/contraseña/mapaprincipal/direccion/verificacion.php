@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <button type="submit">Acceder</button>
             <div class="bottom-text">
-                <p><a href="http://localhost/nuevo/contraseña/mapaprincipal/index.php" style="color:white;">Volver</a></p>
+                <p><a href="/mapaprincipal/index.php" style="color:white;">Volver</a></p>
             </div>
         </form>
     </div>
