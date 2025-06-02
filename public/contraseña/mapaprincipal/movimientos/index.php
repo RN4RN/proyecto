@@ -570,7 +570,7 @@ if ($result_historial) {
 <div class="totalcont">
 
     <div class="barra">
-        <a href="http://localhost/nuevo/contraseña/mapaprincipal/index.php">
+        <a href="/mapaprincipal/index.php">
             <button class="button" aria-label="Volver al mapa principal">
                 <div class="button-box">
                     <span class="button-elem">
