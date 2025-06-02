@@ -1,0 +1,428 @@
+/* Reset de márgenes y ajustes generales */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Fondo */
+.fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://drtcapurimac.gob.pe/portal/wp-content/uploads/2024/10/462145491_1074085158051444_4372639129666397249_n-1024x768.jpg") no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1;
+}
+
+/* Efecto de desenfoque sobre el fondo */
+.fondo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Ruido sobre el fondo */
+.fondo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://www.transparenttextures.com/patterns/noise.png");
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* Contenedor centrado */
+/* Contenedor principal del login */
+.login-container {
+  background-color: #2f2f2fda;
+  border-radius: 30px;
+  box-shadow: rgb(31 31 31 / 17%) 0px -23px 25px 0px inset,
+      rgb(108 108 108 / 23%) 0px -36px 30px 0px inset,
+      rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+      rgba(0, 0, 0, 0.06) 0px 2px 1px,
+      rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px,
+      rgba(0, 0, 0, 0.09) 0px 16px 8px,
+      rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  padding: 20px;
+  max-width: 300px;
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+ 
+}
+
+/* Estilos del formulario */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Títulos */
+.heading {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 40px;
+  margin-bottom: 0px;
+}
+
+.paragraph {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+/* Contenedor de inputs */
+.input-group {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.input-group input {
+  background: none;
+  border: 1px solid #353535;
+  padding: 15px 23px;
+  font-size: 16px;
+  border-radius: 8px;
+  color: #979797;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: rgb(136 136 136 / 17%) 0px -23px 25px 0px inset,
+      rgb(81 81 81 / 23%) 0px -36px 30px inset,
+      rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+      rgba(0, 0, 0, 0.06) 0px 2px 1px,
+      rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px,
+      rgba(0, 0, 0, 0.09) 0px 16px 8px,
+      rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+/* Efecto al enfocar el input */
+.input-group input:focus {
+  border-color: #0173ed;
+  outline: none;
+}
+
+/* Botón de login */
+button {
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0173ed;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
+/* Texto de opciones inferiores */
+.bottom-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.bottom-text a {
+  color: #0173ed;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.bottom-text a:hover {
+  color: #3f95f2;
+}
+/* Estilos para el encabezado */
+.cabeza {
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(255, 162, 40, 0.925) 50%, rgba(255, 162, 40, 0) 100%);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 35px; /* Tamaño grande del texto */
+  font-weight: 900; /* ¡SÚPER GORDITO! */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.815);
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+.logo {
+  height: 80px; /* Ajusta el tamaño del logo */
+  vertical-align: middle; /* Alinea verticalmente con el texto */
+  margin-right: 2px ; /* Espacio entre el logo y el texto */
+}
+
+
+
+/* Ajustar el contenido para que no quede detrás del encabezado */
+.contenido {
+  margin-top: 100px; /* Ajusta según la altura del encabezado */
+  padding: 20px;
+}
+
+/*footer*/
+/* Estilos para el footer */
+.footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.158); /* Oscuro con transparencia */
+  backdrop-filter: blur(5px); /* Efecto de desenfoque */
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 14px;
+}
+
+/* Estilos para los enlaces en el footer */
+.footer a {
+  color: #eda201;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #3f95f2;
+}
+/* From Uiverse.io by reshades */ 
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #00000085;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.2px);
+  -webkit-backdrop-filter: blur(8.2px);
+  border: 1px solid #ff910066;
+  width: 400px;
+  height: 300px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.form h2 {
+  color: #fff;
+  font-weight: bolder;
+}
+
+.path {
+  fill: #ff8800
+}
+
+.svg {
+  filter: blur(20px);
+  z-index: -1;
+  position: absolute;
+  opacity: 50%;
+  animation: anim 3s infinite;
+}
+
+.inp {
+  margin-left: auto;
+  margin-right: auto;
+  white-space: 4px;
+}
+
+.input + .input {
+  margin-left: 0.3em
+}
+
+.input {
+  color: #fff;
+  height: 4em;
+  width: 4em;
+  float: left;
+  text-align: center;
+  background: #00000000;
+  outline: none;
+  border: 1px #ff6004 solid;
+  border-radius: 10px;
+  transition: all 0.6s ease;
+}
+
+.input:focus {
+  outline: none;
+  border: 1px #fff solid;
+}
+
+.input:not(:placeholder-shown) {
+  opacity: 100%
+}
+
+.form button {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f7751e9a;
+  color: #fff;
+  width: 10.5em;
+  height: 3.3em;
+  border: #ff7300 0.2em solid;
+  border-radius: 11px;
+  transition: all 0.5s ease;
+}
+
+.form button:hover {
+  background-color: #ff7b00;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateY(-70px);
+  }
+
+  50% {
+    transform: translateY(-19px);
+  }
+
+  100% {
+    transform: translateY(-70px);
+  }
+}
+.link{
+  text-decoration: none;
+  color: white;
+}
+/*verificar usauario*/
+.usuario {
+  color: #fff;
+  height: 40px;
+  width: 90%;
+
+  text-align: center;
+  background: #00000000;
+  outline: none;
+  border: 1px #ff6004 solid;
+  border-radius: 10px;
+  transition: all 0.6s ease;
+}
+.contra{
+  color: #fff;
+  margin-top: 20px;
+  height: 40px;
+  width: 90%;
+  text-align: center;
+  background: #00000000;
+  outline: none;
+  border: 1px #ff6004 solid;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: all 0.6s ease;
+}
+.usuario:focus {
+  outline: none;
+  border: 1px #fff solid;
+}
+
+.usuario:not(:placeholder-shown) {
+  opacity: 100%
+}
+.contra:focus {
+  outline: none;
+  border: 1px #fff solid;
+}
+
+.contra:not(:placeholder-shown) {
+  opacity: 100%
+}
+/*registrar usuario nuevo */
+.login-container1 {
+  background-color: #2f2f2fda;
+  border-radius: 30px;
+  box-shadow: rgb(31 31 31 / 17%) 0px -23px 25px 0px inset,
+      rgb(108 108 108 / 23%) 0px -36px 30px 0px inset,
+      rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+      rgba(0, 0, 0, 0.06) 0px 2px 1px,
+      rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px,
+      rgba(0, 0, 0, 0.09) 0px 16px 8px,
+      rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  padding: 20px;
+  max-width: 400px;
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+ 
+}
+
+/* Estilos del formulario */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Títulos */
+.heading {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 40px;
+  margin-bottom: 0px;
+}
+
+.paragraph {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 5px;
+
+}
+.bottom-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.bottom-text a {
+  color: #0173ed;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.bottom-text a:hover {
+  color: #3f95f2;
+}
+.pe{
+  color: rgb(202, 202, 202);
+}
